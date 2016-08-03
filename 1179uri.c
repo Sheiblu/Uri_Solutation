@@ -1,34 +1,63 @@
 #include<stdio.h>
+int even[5], odd[5], another[5];
+void event();
+void oddt();
+//int even[5], odd[5], another[5];
+int main()
+{
+    int a1,a2,input,i,j=0,k=0,l=0,n;
+    //int even[5], odd[5], another[5];
+    for(n=0;n<15;n++){
 
-int main(){
-    int a=0,b=0,i,take ,j=0;
-    int eve [15];
-    int od[15], even [5],odd [5];
+    scanf("%d",&input);
 
-    for(i=0;i<15;i++){
-            scanf("%d",&take);
-        if(take%2 == 0){
-            eve[a++] = take;
-        }
-        else{
-            od[b++] = take;}
-    }
-    for(i=0;i<5;i++){
-            even [i] = eve [i];
-        printf("par[%d] = %d\n",i,even[i]);
-    }
-    for(i=0;i<5;i++){
-        odd [i] = od [i];
-        printf("impar[%d] = %d\n",i,odd[i]);
+    if (input %2 == 0 ){
+        even [k] = input;
+          k++;
+         if(k==5){
+            k = 0;
+            event();
+         }
     }
 
-    for(i=5;i<b;i++){
-        printf("impar[%d] = %d\n",j++,od[i]);
-    }
-    j=0;
+    else if (input %2 != 0){
 
-   for(i=5;i<a;i++){
-        printf("par[%d] = %d\n",j++,eve[i]);
+        odd [j] = input;
+        j++;
+
+        if(j==5){
+            j = 0;
+            oddt();
+         }
     }
+
+    }
+    for (i=0;i<j;i++){
+        printf("impar[%d] = %d\n", i, odd[i]);
+      }
+    for (i=0;i<k;i++){
+        printf("par[%d] = %d\n", i, even[i]);
+      }
+
+
     return 0;
 }
+
+  void event (){
+      int a ;
+      int i;
+
+      for (i=0;i<5;i++){
+        printf("par[%d] = %d\n", i, even[i]);
+      }
+}
+
+void oddt (){
+      int a ;
+      int i;
+
+      for (i=0;i<5;i++){
+        printf("impar[%d] = %d\n", i, odd[i]);
+      }
+}
+
