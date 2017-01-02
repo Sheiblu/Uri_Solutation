@@ -8,7 +8,7 @@ int main()
 {
 
     int j=0,i=0,c=0,b=1;
-    double a,total= 0,array[12][12];
+    double a,total= 0;
     char word[2];
 
     scanf(" %s",&word);
